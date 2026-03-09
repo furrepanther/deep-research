@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "approved_by": "furre",
+  "overrides": [
+    {
+      "override_id": "exec-override-deep-research-codeql-log-newline-api-001",
+      "status": "active",
+      "scope": "finding",
+      "tool": "codeql",
+      "rule_id": "codeql/path-traversal-risk",
+      "file": "/mnt/f/.repo-quarantine/deep-research__20260222T132222Z/src/api.ts",
+      "line": 27,
+      "reason": "False positive on newline-containing logging string literal; no path parsing or filesystem access on flagged line.",
+      "approved_by": "furre",
+      "evidence": "Flagged line is log('\\nStarting research...\\n'); detector misfired on '..\\n' substring in string excerpt."
+    },
+    {
+      "override_id": "exec-override-deep-research-codeql-log-newline-run-001",
+      "status": "active",
+      "scope": "finding",
+      "tool": "codeql",
+      "rule_id": "codeql/path-traversal-risk",
+      "file": "/mnt/f/.repo-quarantine/deep-research__20260222T132222Z/src/run.ts",
+      "line": 84,
+      "reason": "False positive on newline-containing logging string literal; no path parsing or filesystem access on flagged line.",
+      "approved_by": "furre",
+      "evidence": "Flagged line is log('\\nStarting research...\\n'); detector misfired on '..\\n' substring in string excerpt."
+    }
+  ]
+}
